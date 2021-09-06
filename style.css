@@ -1,0 +1,368 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 400 14px/1 Roboto,Tahoma,Verdana,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+.wrapper{
+    overflow: hidden;
+}
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.header{
+    background-color: #EEEFF1;
+}
+.header_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 57px 15px;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.navigation_item{
+    padding: 0 21px;
+    font-family: -apple-system, Roboto,BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000;
+}   
+.navigation_item:hover{
+    color: #34547A;
+}
+.first-screen{
+    background-color: #EEEFF1;
+    padding: 83px 0 146px;
+}
+.first-screen_container{
+     display: flex;
+    flex-direction: row;
+}
+.col-50{
+    width: 50%;
+}
+.title-48{
+    font-size: 48px;
+    font-weight: 500;
+    font-family: -apple-system,Roboto, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.title-16{
+     font-size: 16px;
+    font-weight: 400;
+    color: #727272;
+    line-height: 26px;
+    font-family: -apple-system,Roboto, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+.title-32{
+    font-size: 32px;
+    font-weight: 500;
+}
+.first-screen_img{
+    margin: 0 auto;
+    text-align: center;
+}
+.design h2{
+    margin-bottom: 60px;
+}
+.design p{
+    margin-bottom: 60px;
+}
+.design_button{
+    background-color: #34547A;
+    font-family: Roboto;
+    text-transform: uppercase;
+    padding: 25px 41px;
+    color: #fff;
+    transition: 0.3s;
+}
+.design_button:hover{
+    color: #34547A;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.aboutMe_container{
+    padding: 100px 0 119px;
+    text-align: center;
+    max-width: 540px;
+}
+.aboutMe_container h2{
+    margin-bottom: 50px;
+}
+.blue{
+    background-color: #34547A;
+    padding: 100px 0;
+}
+.blue_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.blue_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-21{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.item_text h3{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.item_text p{
+    color: #fff;
+}
+.item_text{
+    margin-left: 20px;
+}
+.mySkills_container{
+    padding: 102px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.mySkills_container h2{
+    margin-top: 102px;
+    margin-bottom: 50px
+}
+.skills_item p{
+    margin-bottom: 10px;
+}
+.skills_item{
+    margin-bottom: 15px;
+    max-width: 90%;
+}
+.skills_item img:first-child{
+    position: absolute;
+}
+.skills_item img:last-child{
+    position: relative;
+    top: -13px;
+    left: -1px;
+}
+.tipo_video{
+    width: 100%;
+    padding: 0 15px;
+}
+.howIWork{
+    background-color: #EEEFF1;
+}
+.howIWork_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    text-align: center;
+    
+}
+.howIWork_container h2{
+    line-height: 37px;
+    margin-bottom: 50px;
+}
+.howIWork_container p{
+    max-width: 540px;
+    line-height: 26px;
+    margin-bottom: 57px;
+}
+
+.tipo_video img:last-child{
+    position: relative;
+    top: -385px;
+    left: 0;
+}
+.col-25{
+    width: 25%;
+}
+.pictures{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pictures .col-25{
+    position: relative;
+    margin-bottom: -3px;
+}
+.hover-img img{
+    margin: 50% auto auto 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.hover-img{
+    background-color: rgba(170, 135, 214, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;    
+}
+.pictures .col-25:hover .hover-img{
+    opacity: 1;
+}
+.clients_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 72px 15px 100px;
+}
+.webSite{
+    background-color: #EEEFF1;
+}
+.webSite_container{
+    max-width: 540px;
+    padding: 100px 0px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.webSite_container p{
+    margin-top: 50px;
+    text-align: center;
+}
+.forms{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 65px 0 50px;
+    justify-content: space-between;
+}
+.forms input{
+    width: 255px;
+    height: 50px;
+    border: 0px;
+    padding: 10px;
+}
+.forms input::placeholder{
+    text-indent: 10px;
+    font-size: 14px;
+}
+.forms textarea{
+    width: 100%;
+    height: 175px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 0px;
+}
+.forms textarea::placeholder{
+    font-size: 14px;
+    
+}
+.webSiteButton{
+    background-color: #34547A;
+    padding: 20px 45px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+    transition: 0.3s;
+}
+.webSiteButton:hover{
+    color: #34547A;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 18px 45px;
+}
+
+.footer{
+    background-color: #34547A;
+    padding: 50px 10px;
+}
+.footer_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.text h3{
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+.rights{
+    color: #fff;
+    font-size: 13px;
+    line-height: 21px;
+}
+.links a{
+    margin-left: 22px;
+}
+@media (max-width:1024px){
+    .footer{
+        padding: 20px 10px;
+    }
+    .webSite_container{
+        padding: 50px 0px 60px;
+    }
+    .webSiteButton{
+        padding: 20px 30px;
+    }
+    .clients_container{
+        padding: 30px 15px ;
+    }
+    .howIWork_container{
+        padding: 50px 0;
+    }
+    .mySkills_container{
+        padding: 50px 15px;
+    }
+    .blue{
+        padding: 40px 0;
+    }
+    .item_text{
+        margin-left: 10px;
+    }
+    .aboutMe_container{
+        padding: 50px 0;
+    }
+    .aboutMe_container h2{
+        margin-bottom: 20px;
+    }
+    .first-screen{
+        padding: 40px 0 70px;
+    }
+    .design h2{
+        margin-bottom: 20px;
+    }
+    .title-48{
+        font-size: 36px;
+    }
+    .design_button{
+        padding: 20px 30px;
+    }
+    .header_container{
+        padding: 20px 15px;
+    }
+    .navigation_item{
+        padding: 0 15px;
+    }
+}
+
