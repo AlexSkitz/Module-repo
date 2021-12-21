@@ -1,3 +1,4 @@
+Используется 86 % хранилища. … Когда у вас закончится место, вы не сможете загружать новые файлы.Подробнее…
 *{
     padding: 0;
     margin: 0;
@@ -32,7 +33,7 @@ img{
     justify-content: space-between;
     padding: 57px 15px;
 }
-.navigation{
+.menu__box{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -40,14 +41,20 @@ img{
 }
 .navigation_item{
     padding: 0 21px;
+}
+.navigation_item a{
+    
     font-family: -apple-system, Roboto,BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
     color: #000;
 }   
-.navigation_item:hover{
+.navigation_item a:hover{
     color: #34547A;
+}
+#menu__toggle{
+    opacity: 0;
 }
 .first-screen{
     background-color: #EEEFF1;
@@ -145,6 +152,7 @@ img{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 .mySkills_container h2{
     margin-top: 102px;
@@ -159,15 +167,18 @@ img{
 }
 .skills_item img:first-child{
     position: absolute;
+    width: 100%;
 }
 .skills_item img:last-child{
     position: relative;
     top: -13px;
     left: -1px;
+    width: 70%;
 }
 .tipo_video{
     width: 100%;
     padding: 0 15px;
+    position: relative;
 }
 .howIWork{
     background-color: #EEEFF1;
@@ -189,11 +200,16 @@ img{
     line-height: 26px;
     margin-bottom: 57px;
 }
-
+.tipo_video img:first-child{
+    z-index: 2;
+}
 .tipo_video img:last-child{
-    position: relative;
-    top: -385px;
-    left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+
+    z-index: 3;
 }
 .col-25{
     width: 25%;
@@ -364,5 +380,218 @@ img{
     .navigation_item{
         padding: 0 15px;
     }
-}
+    .tipo_video img:last-child{
+        width: 75px;
+        height: auto;
+    }
+    .mySkills_container h2 {
+        margin-top: 20px;
+    }
 
+}
+@media(max-width:768px){
+    .title-16{
+        font-size: 14px;
+    }
+    .title-32{
+        font-size: 28px;
+    }
+    .title-48{
+        font-size: 32px;
+    }
+    .title-21{
+        font-size: 17px;
+    }
+    .webSite_container{
+        padding: 15px 0 20px;
+    }
+    .webSite_container p{
+        margin-top: 20px;
+    }
+    .forms{
+        margin: 30px 0 20px;
+    }
+    .clients_container{
+        padding: 10px 15px;
+    }
+    .howIWork_container{
+        padding: 15px 0 ;
+    }
+    .tipo_video img:last-child{
+        width: 50px;
+    }
+    .howIWork_container p{
+        margin-bottom: 20px;
+
+    }
+    .howIWork_container h2 {
+        margin-bottom: 25px;
+    }
+    .mySkills_container{
+        padding: 15px;
+    }
+    .blue_container{
+        flex-wrap: wrap;
+    }
+    .blue_item{
+        width: 33.3%;
+        justify-content: center;
+    }
+    .blue{
+        padding: 15px 0;
+    }
+    .aboutMe_container{
+        padding: 20px;
+    }
+    .first-screen_img{
+        display: none;
+    }
+    .design{
+        width: 100%;
+        text-align: center;
+    }
+    .design p{
+        margin-bottom: 40px;
+    }
+    .design_button{
+        padding: 15px;
+    }
+    .first-screen {
+        padding: 20px 0 40px;
+    }
+    .header_container{
+        padding: 15px;
+    }
+     .mySkills_container h2 {
+        margin-bottom: 20px;
+    }
+    .pictures .col-25{
+        width: 50%;
+    }
+}   
+@media(max-width:650px){
+    .mySkills_container{
+        flex-wrap: wrap;
+    }
+    .mySkills_container .col-50{
+        width: 100%;
+        
+    }   
+    .menu__btn {
+        display: flex;
+        align-items: center; 
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    .menu__box {
+        display: block;
+        position: absolute;
+        display: none;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: auto;
+        margin: 0;
+        padding: 20px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+
+
+    .navigation_item {
+        display: block;
+        padding: 10px 20px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .navigation_item:hover {
+        background-color: #CFD8DC;
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        display: block;
+        right: 0;
+    }
+    .webSiteButton{
+        padding: 15px;
+    }
+    .webSite_container{
+        padding: 15px 15px 20px;
+    }
+    .forms input{
+        width: 48%;
+    }
+}
+@media(max-width:480px){
+    .footer_container{
+        padding: 0;
+        flex-direction: column;
+    }
+    .text h3{
+        margin-bottom: 5px;
+    }
+    .links a {
+        margin-left: 10px;
+    }
+    .forms input{
+        width: 100%;
+    }
+    .forms input:first-child{
+        margin-bottom: 15px;
+    }
+    .clients_container{
+        flex-wrap: wrap;
+    }
+    .clients_container a{
+        width: 50%;
+    }
+    .blue_item{
+        width: 50%;
+    }
+    .links{
+        order: -1;
+        margin: 10px 0;
+    }
+}
